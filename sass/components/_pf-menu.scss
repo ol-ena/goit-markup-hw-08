@@ -1,0 +1,13 @@
+.pf-menu {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    width: 320px;
+}
+
+.pf-menu-item{
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+

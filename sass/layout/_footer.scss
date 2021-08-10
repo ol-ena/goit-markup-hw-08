@@ -69,9 +69,7 @@ address {
 
 .footer-social-list {
     display: flex;
-    justify-content: space-between;
-    margin-right: 137px;
-    margin-left: 137px;
+    justify-content: center;
 }
 
 .footer-social-list-item{
@@ -196,13 +194,19 @@ address {
         width: 450px;
     }
     
-    .footer-container {
+    
+.footer-contacts-container {
     display: flex;
-    }
+    justify-content: space-between;
+    padding-left: 76px;
+    padding-right: 89px;
+}
+
     .footer {
         display: block;
     }
 }
+
 // 1200+
 @media screen and (min-width: 1200px) {
     .footer {

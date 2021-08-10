@@ -1,29 +1,25 @@
-.left-contacts {
+
+.footer {
     padding-top: 60px;
     padding-bottom: 60px;
 }
-
-.footer-container {
-    display: flex;
-}
-
 .footer-logo {
     font-family: var(--secondary-font);
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.19;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: var(--accent-color);
     margin-bottom: 20px;
 }
-
+.studio-not-web-footer {
+    color: var(--some-txt-color);
+}
 .footer-contacts-item {
     &:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 8px;
     }
 }
-
-
 .address-link {
     font-weight: 400;
     font-size: 14px;
@@ -37,8 +33,6 @@
         color: var(--accent-color);
     }
 }
-
-
 
 .footer-contacts-link {
     font-weight: 400;
@@ -54,21 +48,15 @@
     }
 }
 
-
-.studio-not-web-footer {
-    color: var(--some-txt-color);
-}
-
 address {
     font-style: normal;
 }
-
-.right-contacts {
-    margin-left: 70px;
-    margin-top: 72px;
-    margin-bottom: 100px;
+.left-contacts {
+    margin-bottom: 60px;
 }
-
+.right-contacts {
+    margin-bottom: 60px;
+}
 .right-contacts-header {
     font-weight: 700;
     font-size: 14px;
@@ -82,6 +70,8 @@ address {
 .footer-social-list {
     display: flex;
     justify-content: space-between;
+    margin-right: 137px;
+    margin-left: 137px;
 }
 
 .footer-social-list-item{
@@ -89,7 +79,6 @@ address {
         margin-right: 10px;
     }
 }
-
 
 .footer-social-list-link {
     display: flex;
@@ -109,23 +98,9 @@ address {
     }
 }
 
-
 .footer-social-list-icon {
     width: 20px;
     height: 20px;
-}
-
-
-.footer-form-section {
-    margin-left: auto;
-    margin-top: 72px;
-    margin-bottom: 100px;
-    width: 570px;
-    height: 86px;
-}
-
-.footer-form-send{
-    display: flex;
 }
 
 .footer-form-header {
@@ -139,17 +114,17 @@ address {
 }
 
 .footer-form-input {
-    width: 358px;
     height: 50px;
+    width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     cursor: pointer;
-    padding-left: 16px;
     background-color:inherit;
     color: var(--some-txt-color);
-
+    margin-bottom: 20px;
+    padding-left: 16px;
     &:focus {
         outline: none;
     }
@@ -158,8 +133,6 @@ address {
         color: rgba(117,167,117,0.5);
     }
 }
-
-
 
 .footer-form-btn {
     cursor: pointer;
@@ -187,10 +160,110 @@ address {
     }
 }
 
-
-
 .icon-telegram{
     width: 24px;
     height: 24px;
     margin-left: 10px;
+}
+
+.left-contacts {
+    text-align: center;
+}
+.right-contacts {
+    text-align: center;
+}
+
+.footer-form-section {
+    text-align: center;
+}
+.footer-form-btn {
+  margin: 0 auto;
+}
+
+// 480+
+@media screen and (min-width: 480px) {
+    .footer {
+        display: block;
+    }
+    .footer-form-input {
+        width: 450px;  
+    }
+}
+
+// 768+
+@media screen and (min-width: 768px) {
+    .footer-form-input {
+        width: 450px;
+    }
+    
+    .footer-container {
+    display: flex;
+    }
+    .footer {
+        display: block;
+    }
+}
+// 1200+
+@media screen and (min-width: 1200px) {
+    .footer {
+        display: flex;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+      .left-contacts {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-logo {
+    font-size: 26px;
+}
+.footer-contacts-item {
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.right-contacts {
+    margin-left: 70px;
+    padding-top: 72px;
+    padding-bottom: 100px;
+}
+.footer-social-list {
+    margin-right: 0;
+    margin-left: 0;
+}
+.footer-form-section {
+    margin-left: auto;
+    padding-top: 72px;
+    padding-bottom: 100px;
+    width: 570px;
+    height: 86px;
+    text-align: unset;
+}
+
+.footer-form-send{
+    display: flex;
+}
+
+.footer-form-input {
+    width: 358px;
+    margin-bottom: none;
+}
+.footer-form-btn {
+margin-left: 12px;
+}
+
+.left-contacts {
+    margin-bottom: 0;
+    text-align: left;
+}
+.right-contacts {
+    margin-bottom: 0;
+    text-align: left;
+}
 }

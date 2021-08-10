@@ -20,7 +20,7 @@
 
 <body>
     <!--Header-->
-    <!-- <header class="header">
+     <header class="header">
         <div class="container header-container">
             <nav class="navigation">
                 <a class="head-logo link" href="./"><span>Web</span><span class="studio_color_black">Studio</span></a>
@@ -36,6 +36,14 @@
                     </li>
                 </ul>
             </nav>
+
+            <button class="burger-btn" data-menu-open>
+                <svg class="icon-burger-btn">
+                    <use href="./images/sprite.svg#icon-burger">
+                    </use>
+                </svg>
+            </button>
+
             <ul class="head-contacts list">
                 <li class="head-contacts__item">
                     <a class="head-contacts__link link" href="mailto:info@devstudio.com">
@@ -57,7 +65,60 @@
                 </li>
             </ul>
         </div>
-    </header> -->
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu-container">
+                <button class="mobile-menu-close-btn" data-menu-close>
+                    <svg class="mobile-menu-close-icon">
+                        <use href="./images/sprite.svg#icon-close-black-18dp-2-1">
+                        </use>
+                    </svg>
+                </button>
+                <ul class="nav-list list">
+                    <li class="nav-list-item">
+                        <a href="./" class="nav-list-link link">Студія</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="./portfolio.html" class="nav-list-link link">Портфоліо</a>
+                    </li>
+                    <li class="nav-list-item">
+                        <a href="" class="nav-list-link link">Контакти</a>
+                    </li>
+                </ul>
+    
+                <ul class="nav-contacts-list list">
+                    <li class="nav-contacts-item">
+                        <a class="nav-contacts-link-tel link" href="tel:+380961111111">+38 096 111 11 11</a>
+                    </li>
+                    <li class="nav-contacts-item">
+                        <a class="nav-contacts-link-mail link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                    </li>
+                </ul>
+                <ul class="nav-social-list list">
+                    <li class="nav-social-item">
+                        <a class="nav-social-link link nsl-link-current" href="#">
+                            Instagram
+                        </a>
+                    </li>
+                    <li class="nav-social-item">
+                        <a class="nav-social-link link nsl-link-current" href="#">
+                            Twitter
+                        </a>
+                    </li>
+                    <li class="nav-social-item">
+                        <a class="nav-social-link link nsl-link-current" href="#">
+                            Facebook
+                        </a>
+                    </li>
+                    <li class="nav-social-item">
+                        <a class="nav-social-link link" href="#">
+                            LinkedIn
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header> 
 
     <!--Portfolio-->
     <section class="portfolio">
@@ -75,21 +136,25 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img.jpg 1x, ./images/desktop/portfolio/img@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="laptop">
-                            <img srcset="./images/desktop/portfolio/img.webp 1x, ./images/desktop/portfolio/img@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="laptop">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img.jpg 1x, ./images/tablet/portfolio/img@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="laptop">
-                            <img srcset="./images/tablet/portfolio/img.webp 1x, ./images/tablet/portfolio/img@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="laptop">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img.jpg 1x, ./images/mobile/portfolio/img@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="laptop">
-                            <img srcset="./images/mobile/portfolio/img.webp 1x, ./images/mobile/portfolio/img@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="laptop">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img.webp 1x, ./images/desktop/portfolio/img@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img.jpg 1x, ./images/desktop/portfolio/img@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img.webp 1x, ./images/tablet/portfolio/img@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img.jpg 1x, ./images/tablet/portfolio/img@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img.webp 1x, ./images/mobile/portfolio/img@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img.jpg 1x, ./images/mobile/portfolio/img@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img.jpg" alt="laptop">
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -103,21 +168,27 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-1.jpg 1x, ./images/desktop/portfolio/img-1@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="basketball">
-                            <img srcset="./images/desktop/portfolio/img-1.webp 1x, ./images/desktop/portfolio/img-1@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="basketball">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-1.jpg 1x, ./images/tablet/portfolio/img-1@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="basketball">
-                            <img srcset="./images/tablet/portfolio/img-1.webp 1x, ./images/tablet/portfolio/img-1@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="basketball">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-1.jpg 1x, ./images/mobile/portfolio/img-1@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="basketball">
-                            <img srcset="./images/mobile/portfolio/img-1.webp 1x, ./images/mobile/portfolio/img-1@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="basketball">
+
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-1.webp 1x, ./images/desktop/portfolio/img-1@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-1.jpg 1x, ./images/desktop/portfolio/img-1@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-1.webp 1x, ./images/tablet/portfolio/img-1@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-1.jpg 1x, ./images/tablet/portfolio/img-1@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-1.webp 1x, ./images/mobile/portfolio/img-1@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-1.jpg 1x, ./images/mobile/portfolio/img-1@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-1.jpg" alt="basketball">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -131,21 +202,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-2.jpg 1x, ./images/desktop/portfolio/img-2@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="seafood-rest">
-                            <img srcset="./images/desktop/portfolio/img-2.webp 1x, ./images/desktop/portfolio/img-2@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="seafood-rest">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-2.jpg 1x, ./images/tablet/portfolio/img-2@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="seafood-rest">
-                            <img srcset="./images/tablet/portfolio/img-2.webp 1x, ./images/tablet/portfolio/img-2@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="seafood-rest">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-2.jpg 1x, ./images/mobile/portfolio/img-2@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="seafood-rest">
-                            <img srcset="./images/mobile/portfolio/img-2.webp 1x, ./images/mobile/portfolio/img-2@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="seafood-rest">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-2.webp 1x, ./images/desktop/portfolio/img-2@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-2.jpg 1x, ./images/desktop/portfolio/img-2@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-2.webp 1x, ./images/tablet/portfolio/img-2@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-2.jpg 1x, ./images/tablet/portfolio/img-2@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-2.webp 1x, ./images/mobile/portfolio/img-2@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-2.jpg 1x, ./images/mobile/portfolio/img-2@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-2.jpg" alt="seafood-rest">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -159,21 +235,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-3.jpg 1x, ./images/desktop/portfolio/img-3@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="eaarphones">
-                            <img srcset="./images/desktop/portfolio/img-3.webp 1x, ./images/desktop/portfolio/img-3@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="eaarphones">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-3.jpg 1x, ./images/tablet/portfolio/img-3@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="eaarphones">
-                            <img srcset="./images/tablet/portfolio/img-3.webp 1x, ./images/tablet/portfolio/img-3@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="eaarphones">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-3.jpg 1x, ./images/mobile/portfolio/img-3@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="eaarphones">
-                            <img srcset="./images/mobile/portfolio/img-3.webp 1x, ./images/mobile/portfolio/img-3@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="eaarphones">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-3.webp 1x, ./images/desktop/portfolio/img-3@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-3.jpg 1x, ./images/desktop/portfolio/img-3@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-3.webp 1x, ./images/tablet/portfolio/img-3@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-3.jpg 1x, ./images/tablet/portfolio/img-3@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-3.webp 1x, ./images/mobile/portfolio/img-3@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-3.jpg 1x, ./images/mobile/portfolio/img-3@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-3.jpg" alt="eaarphones">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -187,21 +268,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-4.jpg 1x, ./images/desktop/portfolio/img-4@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="boxes">
-                            <img srcset="./images/desktop/portfolio/img-4.webp 1x, ./images/desktop/portfolio/img-4@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="boxes">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-4.jpg 1x, ./images/tablet/portfolio/img-4@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="boxes">
-                            <img srcset="./images/tablet/portfolio/img-4.webp 1x, ./images/tablet/portfolio/img-4@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="boxes">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-4.jpg 1x, ./images/mobile/portfolio/img-4@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="boxes">
-                            <img srcset="./images/mobile/portfolio/img-4.webp 1x, ./images/mobile/portfolio/img-4@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="boxes">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-4.webp 1x, ./images/desktop/portfolio/img-4@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-4.jpg 1x, ./images/desktop/portfolio/img-4@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-4.webp 1x, ./images/tablet/portfolio/img-4@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-4.jpg 1x, ./images/tablet/portfolio/img-4@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-4.webp 1x, ./images/mobile/portfolio/img-4@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-4.jpg 1x, ./images/mobile/portfolio/img-4@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-4.jpg" alt="boxes">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -215,21 +301,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-5.jpg 1x, ./images/desktop/portfolio/img-5@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="imac">
-                            <img srcset="./images/desktop/portfolio/img-5.webp 1x, ./images/desktop/portfolio/img-5@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="imac">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-5.jpg 1x, ./images/tablet/portfolio/img-5@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="imac">
-                            <img srcset="./images/tablet/portfolio/img-5.webp 1x, ./images/tablet/portfolio/img-5@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="imac">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-5.jpg 1x, ./images/mobile/portfolio/img-5@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="imac">
-                            <img srcset="./images/mobile/portfolio/img-5.webp 1x, ./images/mobile/portfolio/img-5@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="imac">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-5.webp 1x, ./images/desktop/portfolio/img-5@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-5.jpg 1x, ./images/desktop/portfolio/img-5@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-5.webp 1x, ./images/tablet/portfolio/img-5@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-5.jpg 1x, ./images/tablet/portfolio/img-5@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-5.webp 1x, ./images/mobile/portfolio/img-5@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-5.jpg 1x, ./images/mobile/portfolio/img-5@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-5.jpg" alt="imac">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -243,21 +334,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-6.jpg 1x, ./images/desktop/portfolio/img-6@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="magazine">
-                            <img srcset="./images/desktop/portfolio/img-6.webp 1x, ./images/desktop/portfolio/img-6@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="magazine">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-6.jpg 1x, ./images/tablet/portfolio/img-6@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="magazine">
-                            <img srcset="./images/tablet/portfolio/img-6.webp 1x, ./images/tablet/portfolio/img-6@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="magazine">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-6.jpg 1x, ./images/mobile/portfolio/img-6@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="magazine">
-                            <img srcset="./images/mobile/portfolio/img-6.webp 1x, ./images/mobile/portfolio/img-6@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="magazine">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-6.webp 1x, ./images/desktop/portfolio/img-6@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-6.jpg 1x, ./images/desktop/portfolio/img-6@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-6.webp 1x, ./images/tablet/portfolio/img-6@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-6.jpg 1x, ./images/tablet/portfolio/img-6@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-6.webp 1x, ./images/mobile/portfolio/img-6@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-6.jpg 1x, ./images/mobile/portfolio/img-6@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-6.jpg" alt="magazine">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -271,21 +367,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-7.jpg 1x, ./images/desktop/portfolio/img-7@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="label">
-                            <img srcset="./images/desktop/portfolio/img-7.webp 1x, ./images/desktop/portfolio/img-7@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="label">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-7.jpg 1x, ./images/tablet/portfolio/img-7@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="label">
-                            <img srcset="./images/tablet/portfolio/img-7.webp 1x, ./images/tablet/portfolio/img-7@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="label">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-7.jpg 1x, ./images/mobile/portfolio/img-7@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="label">
-                            <img srcset="./images/mobile/portfolio/img-7.webp 1x, ./images/mobile/portfolio/img-7@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="label">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-7.webp 1x, ./images/desktop/portfolio/img-7@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-7.jpg 1x, ./images/desktop/portfolio/img-7@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-7.webp 1x, ./images/tablet/portfolio/img-7@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-7.jpg 1x, ./images/tablet/portfolio/img-7@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-7.webp 1x, ./images/mobile/portfolio/img-7@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-7.jpg 1x, ./images/mobile/portfolio/img-7@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-7.jpg" alt="label">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -299,21 +400,26 @@
                 <li class="projects-list-item">
                     <div class="projects-list-img-wrapper">
                         <picture class="projects-list-picture">
-                            <source media="min-width:1200px">
-                            <img srcset="./images/desktop/portfolio/img-8.jpg 1x, ./images/desktop/portfolio/img-8@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="business">
-                            <img srcset="./images/desktop/portfolio/img-8.webp 1x, ./images/desktop/portfolio/img-8@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="business">
-                            <source media="min-width:768px">
-                            <img srcset="./images/tablet/portfolio/img-8.jpg 1x, ./images/tablet/portfolio/img-8@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="business">
-                            <img srcset="./images/tablet/portfolio/img-8.webp 1x, ./images/tablet/portfolio/img-8@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="business">
-                            <source media="min-width:280px">
-                            <img srcset="./images/mobile/portfolio/img-8.jpg 1x, ./images/mobile/portfolio/img-8@2x.jpg 2x"
-                                class="projects-list-img" src="#" alt="business">
-                            <img srcset="./images/mobile/portfolio/img-8.webp 1x, ./images/mobile/portfolio/img-8@2x.webp 2x"
-                                class="projects-list-img" type="image/webp" src="#" alt="business">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-8.webp 1x, ./images/desktop/portfolio/img-8@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/desktop/portfolio/img-8.jpg 1x, ./images/desktop/portfolio/img-8@2x.jpg 2x">
+
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-8.webp 1x, ./images/tablet/portfolio/img-8@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 768px)"
+                                srcset="./images/tablet/portfolio/img-8.jpg 1x, ./images/tablet/portfolio/img-8@2x.jpg 2x">
+
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-8.webp 1x, ./images/mobile/portfolio/img-8@2x.webp 2x"
+                                type="image/webp">
+                            <source media="(min-width: 280px)"
+                                srcset="./images/mobile/portfolio/img-8.jpg 1x, ./images/mobile/portfolio/img-8@2x.jpg 2x">
+
+                            <img class="projects-list-img" src="./images/mobile/portfolio/img-8.jpg" alt="business">
+
                         </picture>
                         <p class="overlay">Технокряк це сучасна платформа розповсюдження коронавіруса. Компанії
                             використовують цю платформу для цифрового шпіонажу і атак на захищені сервіси конкурентів.
@@ -408,7 +514,8 @@
 
         </div>
     </footer> -->
-
+    
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>

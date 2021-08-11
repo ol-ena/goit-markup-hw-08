@@ -521,6 +521,9 @@ body {
     margin-left: -30px;
     margin-bottom: -30px;
   }
+  .our-adv__header {
+    text-align: left;
+  }
   .our-adv__bg {
     width: 354px;
     height: 120px;
@@ -1360,6 +1363,7 @@ address {
   cursor: pointer;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  border: 1px solid #eeeeee;
 }
 
 .projects-list-item:hover, .projects-list-item:focus {

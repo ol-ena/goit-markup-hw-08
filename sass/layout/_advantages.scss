@@ -57,7 +57,10 @@
         margin-left: -30px;
         margin-bottom: -30px;
     }
-    
+
+    .our-adv__header {
+        text-align: left;
+    }
     .our-adv__bg {
         width: 354px;
         height: 120px;    
@@ -97,8 +100,8 @@
         flex-basis: calc((100% - 120px) / 4);
       }
 
-    
 }
+
 
 // .our-adv-list {
 //     display: flex;

@@ -236,10 +236,11 @@
     position: relative;
     padding-top: 48px;
     padding-left: 40px;
+    padding-bottom: 48px;
 }
 
 .nav-list{
-    margin-bottom: 306px;
+    margin-bottom: 300px;
 }
 
 .nav-list-item{
@@ -250,8 +251,6 @@
     &:not(:last-child) {
         margin-bottom: 32px;
     }
-
-   
 }
 
 .nav-list-link{
@@ -264,7 +263,7 @@
 }
 
 .nav-contacts-list{
-    margin-bottom: 84px;   
+    margin-bottom: 64px;   
 }
 
 .nav-contacts-item{

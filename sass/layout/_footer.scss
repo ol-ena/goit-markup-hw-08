@@ -128,7 +128,7 @@ address {
     }
     
     &::placeholder {
-        color: rgba(117,167,117,0.5);
+        color: rgba(255, 255, 255, 0.6);
     }
 }
 
@@ -223,9 +223,14 @@ address {
     display: flex;
 }
 
+.footer-contacts-container {
+    padding-left: 0;
+}
+
 .footer-logo {
     font-size: 26px;
 }
+
 .footer-contacts-item {
     &:not(:last-child) {
         margin-bottom: 9px;

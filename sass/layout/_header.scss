@@ -32,7 +32,6 @@
     margin-left: auto;
 }
 
-
 .head-logo {
     font-family: var(--secondary-font);
     font-weight: 900;
@@ -92,7 +91,7 @@
     color: #757575;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 250ms;
-
+    fill: #757575;
     &:hover, &:focus {
         color: var(--accent-color);
         fill: var(--accent-color);
@@ -147,6 +146,7 @@
         width: 14px;
         height: 10px;
     }
+
     .icon__phone {
         margin-right: 7px;
         width: 10px;

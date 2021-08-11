@@ -13,8 +13,8 @@
 
 .pf-menu {
     display: flex;
-    margin-bottom: 60px;
-    flex-wrap: wrap;  
+    flex-wrap: wrap; 
+    margin-bottom: 40px; 
 }
 
 .pf-menu-item{
@@ -32,6 +32,7 @@
 @media screen and (min-width: 768px) {
     .pf-menu{
         justify-content: center; 
+        margin-bottom: 30px;
     }
 }
 
@@ -39,5 +40,12 @@
 .pf-menu-item{
     &:not(:last-child) {
         margin-right: 8px;
+    }
+}
+
+// 1200+
+@media screen and (min-width: 1200px) {
+    .pf-menu{
+        margin-bottom: 50px;
     }
 }

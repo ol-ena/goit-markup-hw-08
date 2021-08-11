@@ -188,6 +188,7 @@ body {
   color: #757575;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
+  fill: #757575;
 }
 
 .head-contacts__link:hover, .head-contacts__link:focus {
@@ -723,6 +724,7 @@ body {
   }
   .team-header {
     font-size: 36px;
+    margin-bottom: 50px;
   }
   .team-member {
     flex-basis: calc((100% - 120px) / 4);
@@ -958,7 +960,7 @@ address {
 }
 
 .footer-form-input::placeholder {
-  color: rgba(117, 167, 117, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-form-btn {
@@ -1045,6 +1047,9 @@ address {
   }
   .footer-container {
     display: flex;
+  }
+  .footer-contacts-container {
+    padding-left: 0;
   }
   .footer-logo {
     font-size: 26px;
@@ -1296,17 +1301,23 @@ address {
 }
 
 .portfolio {
-  padding-top: 94px;
+  padding-top: 60px;
 }
 
 .pf-header {
   display: none;
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+  }
+}
+
 .pf-menu {
   display: flex;
-  margin-bottom: 60px;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .pf-menu-item {
@@ -1321,11 +1332,18 @@ address {
 @media screen and (min-width: 768px) {
   .pf-menu {
     justify-content: center;
+    margin-bottom: 30px;
   }
 }
 
 .pf-menu-item:not(:last-child) {
   margin-right: 8px;
+}
+
+@media screen and (min-width: 1200px) {
+  .pf-menu {
+    margin-bottom: 50px;
+  }
 }
 
 .pf-btn {
@@ -1356,6 +1374,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   padding-bottom: 94px;
+  margin-bottom: -30px;
 }
 
 .projects-list-item {
@@ -1363,7 +1382,6 @@ address {
   cursor: pointer;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
-  border: 1px solid #eeeeee;
 }
 
 .projects-list-item:hover, .projects-list-item:focus {
@@ -1371,12 +1389,8 @@ address {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects-list {
-  margin-bottom: -30px;
-}
-
-.projects-list-item:not(:last-child) {
-  margin-bottom: 30px;
+.projects-list-content {
+  border: 1px solid #eeeeee;
 }
 
 @media screen and (min-width: 768px) {
@@ -1392,13 +1406,7 @@ address {
 }
 
 @media screen and (min-width: 1200px) {
-  .projects-list {
-    margin-left: -30px;
-    margin-top: -30px;
-  }
   .projects-list-item {
-    margin-left: 30px;
-    margin-top: 30px;
     flex-basis: calc((100% - 90px)/3);
   }
 }
